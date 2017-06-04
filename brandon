@@ -8,8 +8,7 @@ int main() {
 	int j = 4 * (side / 2);//used for inside space equation
 	int r = 3 * side - j;//equation for inside spaces
 	int k = side - 1; //constant for outside spaces
-	int i; //incrimentation
-	int x;//incrimentation
+	int i , x; //incrimentation
 	//first
 	for (int i = 0;i < k;i++) {
 		cout << " ";}
