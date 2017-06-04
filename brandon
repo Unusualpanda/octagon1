@@ -1,0 +1,56 @@
+#include<iostream>
+#include<string>
+using namespace std;
+double side;
+int main() {
+	cout << "Enter the octagon side value: ";
+	cin >> side;
+	int j = 4 * (side / 2);//used for inside space equation
+	int r = 3 * side - j;//equation for inside spaces
+	int k = side - 1; //constant for outside spaces
+	int i; //incrimentation
+	int x;//incrimentation
+	//first
+	for (int i = 0;i < k;i++) {
+		cout << " ";}
+	//up to the middle	
+	for (i = 0;i < side;i++) {
+		cout << "*";}
+	cout << endl;
+	k--;
+	while (k >= 0) {
+		for (i = 0;i < k;i++) {
+			cout << " ";}
+		cout << "*";
+		for (i = 0;i < r;i++) {
+			cout << " ";}
+		cout << "*" << endl;
+		k--;
+		r = r + 2;
+	}r = r - 2;
+	//middle
+	for (i = 1;i < side;i++) {
+		cout << "*";
+		for (x = 0;x< r;x++) {
+			cout << " ";}
+		cout << "*" << endl;}
+	k = 1;
+	r = r - 2;
+	//bottom
+	while (k < side-1) {
+		for (i = 0;i < k;i++) {
+			cout << " ";}
+		cout << "*";
+		for (i = 0;i < r;i++) {
+			cout << " ";}
+		cout << "*" << endl;
+		k++;
+		r = r - 2;}
+	//last row
+	for (int i = 0;i < k;i++) {
+		cout << " ";
+	}for (x = 0;x < side;x++) {
+		cout << "*";
+	}cout << endl;
+		system("pause");
+		return 0;}
